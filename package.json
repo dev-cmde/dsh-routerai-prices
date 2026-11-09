@@ -1,0 +1,53 @@
+{
+  "name": "dsh-routerai-prices",
+  "version": "0.2.2",
+  "description": "RouterAI price table for the profile's models with the active one highlighted.",
+  "author": "Comrad_e - https://dev.cmde.ru",
+  "homepage": "https://dev.cmde.ru",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dev-cmde/dsh-routerai-prices.git"
+  },
+  "license": "MIT",
+  "keywords": [
+    "dsh",
+    "dsh-plugin",
+    "routerai",
+    "prices",
+    "models",
+    "sidebar"
+  ],
+  "files": [
+    "LICENSE",
+    "README.md",
+    "icon.svg",
+    "locale",
+    "cordis.patch.yml",
+    "lib",
+    "screenshots.json",
+    "assets"
+  ],
+  "type": "module",
+  "main": "lib/index.js",
+  "exports": {
+    ".": "./lib/index.js",
+    "./client": "./lib/client.js",
+    "./package.json": "./package.json",
+    "./cordis.patch.yml": "./cordis.patch.yml",
+    "./icon": "./icon.svg",
+    "./locale/*.json": "./locale/*.json"
+  },
+  "engines": {
+    "dsh": ">=0.2.0"
+  },
+  "dsh": {
+    "client": {
+      "platform": "web",
+      "immediately": true,
+      "inject": []
+    },
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    }
+  }
+}

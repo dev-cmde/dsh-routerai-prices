@@ -1,0 +1,11 @@
+# Normalise line endings in the working tree on checkout, whatever the
+# local `core.autocrlf` is set to. Without this, a Windows clone with the
+# Git for Windows default (`autocrlf=true`) rewrites every text file to
+# CRLF, and `git+https://` installs differ from `github:` tarball ones.
+* text=auto eol=lf
+
+# Binary assets must stay byte-for-byte.
+*.png binary
+*.ico binary
+*.woff binary
+*.woff2 binary
